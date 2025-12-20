@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        /* start of services */
+        #services{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background-color: #f2f2f2;
+        }
+
+        .hd4{
+            font-size: 58px;
+            color: rgb(87, 132, 187);
+            margin-bottom: 30px;
+        }
+
+        .content-box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cards{
+            min-height: 220px;
+            width: 320px;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(127, 106, 202);
+            color: #fff;
+            text-align: center;
+            margin: 10px 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: all 0.4s ease-in-out;
+        }
+
+        .cards .hd5{
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .cards .ph1{
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        /* Hover effects with overlay and readable text */
+        .cards:nth-child(1):hover{
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('../image/cakes-download.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .cards:nth-child(2):hover{
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('../image/cakes-download2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .cards:nth-child(3):hover{
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('../image/cakes-download4.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .cards:nth-child(4):hover{
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('../image/download.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .cards:nth-child(5):hover{
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('../image/cakes-download5.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1000px){
+            .cards{
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 600px){
+            .cards{
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- start of services -->
+    <section id="services">
+        <h2 class="hd4">Our Services</h2>
+        <div class="content-box">
+            <div class="cards">
+                <h3 class="hd5">Custom Creators</h3>
+                <p class="ph1">Pumpkin pie, lemon bars, spring holiday sugar cookies.</p>
+            </div>
+
+            <div class="cards">
+                <h3 class="hd5">Intermediate Skills</h3>
+                <p class="ph1">Pumpkin pie, lemon bars, spring holiday sugar cookies.</p>
+            </div>
+
+            <div class="cards">
+                <h3 class="hd5">Beginner-Friendly</h3>
+                <p class="ph1">Pumpkin pie, lemon bars, spring holiday sugar cookies.</p>
+            </div>
+
+            <div class="cards">
+                <h3 class="hd5">Advantage Masterpiece</h3>
+                <p class="ph1">Pumpkin pie, lemon bars, spring holiday sugar cookies.</p>
+            </div>
+
+            <div class="cards">
+                <h3 class="hd5">Custom Creations</h3>
+                <p class="ph1">Pumpkin pie, lemon bars, spring holiday sugar cookies.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

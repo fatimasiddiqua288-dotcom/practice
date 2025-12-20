@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!......jquery cdn.......>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery//3.7.1/lquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+                    $("P").hide();
+            });
+
+            $(".btn2").click(function(){
+                $("h1").hide();
+            });
+
+            $(".btn3").click(function(){
+                $("P").show();
+            });
+
+            $(".btn4").click(function(){
+                $("h1").show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jquery is fun</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. sequi aliquid nesciunt repudiandae nemo cumque</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. sequi aliquid nesciunt repudiandae nemo cumque</p>
+    <button class="btn1">click here to hide paragraph</button>
+
+     <button class="btn2">click here to hide heading</button>
+
+      <button class="btn3">click here to hide paragraph</button>
+
+       <button class="btn4">click here to hide heading</button>
+</body>
+</html>

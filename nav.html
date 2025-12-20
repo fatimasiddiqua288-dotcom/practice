@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* start of gallery */
+#gallery{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.hd2{
+    color: rgb(128, 19, 19);
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+.gall{
+    width: 80%;
+    display: flex;
+    margin: 5% auto 0;
+    box-sizing: border-box;
+}
+.image-box{
+    margin: 0 1%;
+    flex-grow: 1;
+    flex-basis: 0;
+    transition: all .5s ease;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.image-box img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: all .5s ease;
+    border-radius: 20px;
+}
+.image-box:hover{
+    flex-basis: 50%;
+}
+.active{
+    flex-basis: 50%;
+}
+.gall:hover .active{
+    flex-basis: 0%;
+}
+.image-box:nth-child(1):hover{
+    flex-basis: 50%;
+}
+/* end OFF gallery */
+    </style>
+</head>
+<body>
+<!-----start of gallery----->
+    <section id="gallery">
+        <h1 class="hd2">OUR GALLERY</h1>
+<div class="gall">
+    <div class="image-box">
+        <img src="https://img.freepik.com/free-photo/cupcakes_74190-18.jpg" alt="">
+    </div>
+
+    <div class="image-box">
+        <img src="https://img.freepik.com/free-photo/cupcakes_74190-18.jpg" alt="">
+    </div>
+
+    <div class="image-box">
+        <img src="https://img.freepik.com/free-photo/cupcakes_74190-18.jpg" alt="">
+    </div>
+
+    <div class="image-box">
+        <img src="https://img.freepik.com/free-photo/cupcakes_74190-18.jpg" alt="">
+    </div>
+
+    <div class="image-box">
+        <img src="https://img.freepik.com/free-photo/cupcakes_74190-18.jpg" alt="">
+    </div>
+    <div class="image-box">
+        <img src="https://img.freepik.com/free-photo/cupcakes_74190-18.jpg" alt="">
+    </div>
+
+    <div class="image-box">
+        <img src="https://img.freepik.com/free-photo/cupcakes_74190-18.jpg" alt="">
+    </div>
+
+    <div class="image-box">
+        <img src="https://img.freepik.com/free-photo/cupcakes_74190-18.jpg" alt="">
+    </div>
+
+    <div class="image-box">
+        <img src="https://img.freepik.com/free-photo/cupcakes_74190-18.jpg" alt="">
+    </div>
+
+</div>
+</section>
+<!-----end of gallery----->
+</body>
+</html>
