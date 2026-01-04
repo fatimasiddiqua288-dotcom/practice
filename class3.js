@@ -62,6 +62,51 @@ for (let i = 1; i<=5; i++){
 }
 
 //print even numbers 1 to 10
-for(let i = 1; i<= 10; i ++){
-    if (i % 2 === o)
+for (let i = 1; i <= 10; i ++){
+    if (i % 2 === 0)
+        console.log(i);
 }
+
+//Sum of numbers from 1 to 10
+let sum = 0;
+
+for (let i = 1; i <= 10; i++) {
+     sum += i;
+}
+
+console.log("sum:" , sum);
+
+//functions
+function greet() {
+    console.log("HELLO, WELLCOME");
+}
+
+greet(); // function call
+
+//greeting with name
+function greetUser(name) {
+    console.log("HELLO" +name);
+}
+
+greetUser("fatima");
+greetUser("sidra");
+
+// Add Two Numbers
+function add(a , b) {
+    console.log(a + b);
+}
+
+add(5 , 3);
+add(10 , 20);
+
+// sum using function
+function calculatesum(limit) {
+    let sum = 0;
+
+for (let i = 1; i <= limit; i ++){
+    sum += i;
+}
+return sum;
+}
+
+console.log(calculatesum(10));
