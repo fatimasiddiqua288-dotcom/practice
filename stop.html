@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Stopwatch</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #121212;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .box {
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 280px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #00d9ff;
+    }
+
+    .screen {
+      font-size: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+    }
+
+    button {
+      padding: 10px 18px;
+      margin: 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .start { background: green; color: white; }
+    .stop { background: red; color: white; }
+    .reset { background: orange; color: black; }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Stopwatch</h2>
+
+    <div class="screen" id="display">00:00:00</div>
+
+    <button class="start" onclick="startWatch()">Start</button>
+    <button class="stop" onclick="stopWatch()">Stop</button>
+    <button class="reset" onclick="resetWatch()">Reset</button>
+  </div>
+
+  <script>
+    let seconds = 0;
+    let minutes = 0;
+    let hours = 0;
+    let timer = null;
+
+    function updateDisplay() {
+      document.getElementById("display").innerText =
+        `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+    }
+
+    function startWatch() {
+      if (timer !== null) return;
+
+      timer = setInterval(() => {
+        seconds++;
+
+        if (seconds === 60) {
+          seconds = 0;
+          minutes++;
+        }
+
+        if (minutes === 60) {
+          minutes = 0;
+          hours++;
+        }
+
+        updateDisplay();
+      }, 1000);
+    }
+
+    function stopWatch() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    function resetWatch() {
+      stopWatch();
+      seconds = 0;
+      minutes = 0;
+      hours = 0;
+      updateDisplay();
+    }
+  </script>
+
+</body>
+</html>
