@@ -1,0 +1,37 @@
+function task1(callback) {
+    setTimeout(() => {
+        console.log("task 1 is running");
+        callback();
+    },  2500);
+}
+
+function task2(callback) {
+    setTimeout(() => {
+     console.log("task 2 is running");
+        callback();
+    }, 4500);
+}
+
+function task3(callback) {
+    setTimeout(() => {
+     console.log("task 3 is running");
+        callback();
+    }, 500);
+}
+
+function task4(callback) {
+    setTimeout(() => {
+     console.log("task 4 is running");
+        callback();
+    },   4000);
+}
+
+task1(() => {
+    task2(() =>  {
+        task3(() => {
+            task4(() => {
+                console.log("running all task");
+             });
+        });
+    });
+});
